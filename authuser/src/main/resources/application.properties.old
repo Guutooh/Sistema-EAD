@@ -1,0 +1,9 @@
+server.port=8087
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/ead-authuser
+spring.jooq.sql-dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=true
+  # Usuário do banco de dados
+spring.datasource.username=postgres
+  # Senha do banco de dados
+spring.datasource.password=root
