@@ -9,6 +9,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 public class SpecificationTemplate {
 
+    //@Or -> um ou outro
     @And({
             @Spec(path = "userType", spec = Equal.class),
             @Spec(path = "userStatus", spec = Equal.class),
