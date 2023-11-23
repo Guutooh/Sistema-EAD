@@ -8,6 +8,7 @@ import com.ead.course.repository.LessonRepository;
 import com.ead.course.repository.ModuloRepository;
 import com.ead.course.service.CourseService;
 import com.ead.course.specifications.SpecificationTemplate;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,16 +21,14 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class CourseServiceImpl implements CourseService {
 
-    @Autowired
-    CourseRepository courseRepository;
+    private final CourseRepository courseRepository;
 
-    @Autowired
-    ModuloRepository moduloRepository;
+    private final ModuloRepository moduloRepository;
 
-    @Autowired
-    LessonRepository lessonRepository;
+    private final LessonRepository lessonRepository;
     @Transactional
     @Override
     public void deletar(CourseModel courseModel) {

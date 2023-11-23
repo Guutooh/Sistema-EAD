@@ -7,9 +7,14 @@ import com.ead.course.model.LessonModel;
 import com.ead.course.model.ModuloModel;
 import com.ead.course.service.LessonService;
 import com.ead.course.service.ModuloService;
+import com.ead.course.specifications.SpecificationTemplate;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -58,6 +63,7 @@ public class LessonController {
                                            @PathVariable(value = "moduloId") UUID lessonId) {
 
         Optional<LessonModel> lessonModelOptional = lessonService.findLessonIntoModulo(modulosId, lessonId);
+
         if (!lessonModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Lesson não encontrado para esse módulo");
         }
@@ -85,9 +91,11 @@ public class LessonController {
     }
 
     @GetMapping("/modulos/{modulosId}/lessons/")
-    public ResponseEntity<List<LessonModel>> listarTodosLessons(@PathVariable(value = "modulosId") UUID modulosId){
+    public ResponseEntity<Page<LessonModel>> listarTodosLessons(@PathVariable(value="moduleId") UUID modulosId,
+                                                                SpecificationTemplate.LessonSpec spec,
+                                                                @PageableDefault(page = 0, size = 10, sort = "lessonId", direction = Sort.Direction.ASC) Pageable pageable){
 
-        return ResponseEntity.status(HttpStatus.OK).body(lessonService.findAllByModulo(modulosId));
+        return ResponseEntity.status(HttpStatus.OK).body(lessonService.findAllByModulo(SpecificationTemplate.lessonModuleId(modulosId).and(spec), pageable));
     }
 
 

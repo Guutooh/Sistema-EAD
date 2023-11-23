@@ -5,6 +5,7 @@ import com.ead.authuser.model.UserModel;
 import com.ead.authuser.service.UserService;
 import com.ead.authuser.specifications.SpecificationTemplate;
 import com.fasterxml.jackson.annotation.JsonView;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,13 +26,12 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 
 @RestController
+@RequiredArgsConstructor
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
-    UserService userService;
-
+    private final UserService userService;
 
     @GetMapping()
     public ResponseEntity<Page<UserModel>> ListarUsuarios(SpecificationTemplate.UserSpec spec,

@@ -6,9 +6,14 @@ import com.ead.course.model.CourseModel;
 import com.ead.course.model.ModuloModel;
 import com.ead.course.service.CourseService;
 import com.ead.course.service.ModuloService;
+import com.ead.course.specifications.SpecificationTemplate;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -37,6 +42,7 @@ public class ModuloController {
                                              @RequestBody @Valid ModuloDto moduloDto) {
 
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
+
         if (!courseModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado");
         }
@@ -84,9 +90,11 @@ public class ModuloController {
 
 
     @GetMapping("/courses/{courseId}/modulos")
-    public ResponseEntity<List<ModuloModel>> listarTodosModulos(@PathVariable(value = "courseId") UUID courseId) {
+    public ResponseEntity<Page<ModuloModel>> listarTodosModulos(@PathVariable(value = "courseId") UUID courseId,
+                                                                SpecificationTemplate.ModuleSpec spec,
+                                                                @PageableDefault(page = 0,size = 10, sort = "moduleId", direction = Sort.Direction.ASC) Pageable pageable){
 
-        return ResponseEntity.status(HttpStatus.OK).body(moduloService.findAllByCourse(courseId));
+        return ResponseEntity.status(HttpStatus.OK).body(moduloService.findAllByCourse(SpecificationTemplate.moduleCourseId(courseId).and(spec), pageable));
     }
 
     @GetMapping("/courses/{courseId}/modulos/{moduloID}")
