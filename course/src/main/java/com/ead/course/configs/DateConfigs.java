@@ -8,6 +8,10 @@ import org.springframework.context.annotation.Primary;
 
 import java.time.format.DateTimeFormatter;
 
+/*
+    Classe de modelo, caso queira configurar a hora com essa configuração global
+ */
+
 //@Configuration
 public class DateConfigs {
 

@@ -24,3 +24,15 @@ springdoc:
   swagger-ui:
     enabled: true
     doc-expansion: none
+
+output:
+  ansi:
+    enable: always
+
+logging:
+  level:
+    com.ead: TRACE
+    root: info
+    org.springframework.web: debug
+    org.hibernate: info
+

@@ -74,7 +74,7 @@ public class CourseController {
 
     @GetMapping()
     public ResponseEntity<Page<CourseModel>> listarTodosCursos(SpecificationTemplate.CourseSpec spec,
-                                                               @PageableDefault(page = 0, size = 10, sort = "courseID",
+                                                               @PageableDefault(size = 10, sort = "courseID",
                                                                        direction = Sort.Direction.ASC)Pageable paginacao){
 
         return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(spec,paginacao));
