@@ -27,20 +27,25 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Log4j2
 @RestController
-@RequiredArgsConstructor
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/users")
 public class UserController {
 
-    private final UserService userService;
+    @Autowired
+    private  UserService userService;
 
     @GetMapping()
     public ResponseEntity<Page<UserModel>> ListarUsuarios(SpecificationTemplate.UserSpec spec,
-                                                          @PageableDefault(page = 0, size = 10, sort = "userId",
-                                                                  direction = Sort.Direction.ASC)
-                                                          Pageable paginacao) {
+                                                          @PageableDefault(page = 0, size = 10, sort = "userId", direction = Sort.Direction.ASC) Pageable pageable,
+                                                          @RequestParam(required = false) UUID courseID){
 
-        Page<UserModel> userModelPage = userService.findAll(spec, paginacao);
+        Page<UserModel> userModelPage = null;
+
+        if(courseID != null){
+            userModelPage =  userService.findAll(SpecificationTemplate.userCourseId(courseID).and(spec), pageable);
+        }else {
+            userModelPage =  userService.findAll(spec,pageable);
+        }
 
         if (!userModelPage.isEmpty()) {
             for (UserModel user : userModelPage.toList()) {

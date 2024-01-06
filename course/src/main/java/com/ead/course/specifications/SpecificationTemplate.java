@@ -1,21 +1,23 @@
 package com.ead.course.specifications;
 
 import com.ead.course.model.CourseModel;
+import com.ead.course.model.CourseUserModel;
 import com.ead.course.model.LessonModel;
 import com.ead.course.model.ModuloModel;
 import net.kaczmarzyk.spring.data.jpa.domain.Equal;
+import net.kaczmarzyk.spring.data.jpa.domain.Like;
 import net.kaczmarzyk.spring.data.jpa.domain.LikeIgnoreCase;
 import net.kaczmarzyk.spring.data.jpa.web.annotation.And;
 import net.kaczmarzyk.spring.data.jpa.web.annotation.Spec;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.UUID;
 
 public class SpecificationTemplate {
-
 
     @And({
             @Spec(path = "courseLevel", spec = Equal.class),
@@ -25,10 +27,10 @@ public class SpecificationTemplate {
     public interface CourseSpec extends Specification<CourseModel> {}
 
 
-    @Spec(path = "title", spec = LikeIgnoreCase.class)
+    @Spec(path = "title", spec = Like.class)
     public interface ModuleSpec extends Specification<ModuloModel> {}
 
-    @Spec(path = "title", spec = LikeIgnoreCase.class)
+    @Spec(path = "title", spec = Like.class)
     public interface LessonSpec extends Specification<LessonModel> {}
 
     public static Specification<ModuloModel> moduleCourseId(final UUID courseId) {
@@ -48,6 +50,14 @@ public class SpecificationTemplate {
             Root<ModuloModel> module = query.from(ModuloModel.class);
             Expression<Collection<LessonModel>> moduleLessons = module.get("lessons");
             return cb.and(cb.equal(module.get("moduleId"), moduleId), cb.isMember(lesson, moduleLessons));
+        };
+    }
+
+    public static Specification<CourseModel> courseUserId(final UUID userId) {
+        return (root, query, cb) -> {
+            query.distinct(true);
+            Join<CourseModel, CourseUserModel> courseProd = root.join("coursesUsers");
+            return cb.equal(courseProd.get("userId"), userId);
         };
     }
 }

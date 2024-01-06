@@ -33,7 +33,7 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public void deletar(CourseModel courseModel) {
 
-        List<ModuloModel> moduleModelList = moduloRepository.findAllModulosIntoCourse(courseModel.getCourseID());
+        List<ModuloModel> moduleModelList = moduloRepository.findAllModulosIntoCourse(courseModel.getCourseId());
 
         if(!moduleModelList.isEmpty()){
 

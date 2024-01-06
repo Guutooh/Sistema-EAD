@@ -25,7 +25,6 @@ public class AuthenticationController {
     @Autowired
     UserService userService;
 
-
     @PostMapping("/signup")
     public ResponseEntity<?> cadastrarUsuario(@RequestBody
                                               @Validated(UserDto.UserView.RegistrationPost.class)

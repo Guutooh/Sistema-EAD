@@ -4,7 +4,7 @@ import com.ead.course.dtos.CourseDto;
 import com.ead.course.model.CourseModel;
 import com.ead.course.service.CourseService;
 import com.ead.course.specifications.SpecificationTemplate;
-import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,11 +20,10 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Optional;
 import java.util.UUID;
-
+@Log4j2
 @RestController
 @RequestMapping("/courses")
 @CrossOrigin(origins = "*", maxAge = 3600)
-@Tag(name = "Course-Controller")
 public class CourseController {
 
 
@@ -44,11 +43,11 @@ public class CourseController {
     }
 
     @DeleteMapping("/{courseId}")
-    public ResponseEntity<?> deletarCurso(@PathVariable (value = "courseId")UUID courseId){
+    public ResponseEntity<?> deletarCurso(@PathVariable(value = "courseId") UUID courseId) {
 
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
-        if(!courseModelOptional.isPresent()){
+        if (!courseModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado");
         }
         courseService.deletar(courseModelOptional.get());
@@ -56,12 +55,12 @@ public class CourseController {
     }
 
     @PutMapping()
-    public ResponseEntity<?> atualizarCurso(@PathVariable  (value = "id")UUID courseId,
-                                            @RequestBody @Valid CourseDto courseDto){
+    public ResponseEntity<?> atualizarCurso(@PathVariable(value = "courseId") UUID courseId,
+                                            @RequestBody @Valid CourseDto courseDto) {
 
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
-        if(!courseModelOptional.isPresent()){
+        if (!courseModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado");
         }
 
@@ -74,17 +73,22 @@ public class CourseController {
 
     @GetMapping()
     public ResponseEntity<Page<CourseModel>> listarTodosCursos(SpecificationTemplate.CourseSpec spec,
-                                                               @PageableDefault(size = 10, sort = "courseID",
-                                                                       direction = Sort.Direction.ASC)Pageable paginacao){
+                                                               @PageableDefault(page = 0, size = 10, sort = "courseId", direction = Sort.Direction.ASC) Pageable paginacao,
+                                                               @RequestParam(required = false) UUID userId) {
 
-        return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(spec,paginacao));
+        if(userId != null){
+            return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(SpecificationTemplate.courseUserId(userId).and(spec), paginacao));
+        } else {
+            return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(spec, paginacao));
+        }
+
     }
 
     @GetMapping("/{courseId}")
-    public ResponseEntity<?> PesquiserCurso(@PathVariable  (value = "courseId")UUID courseId){
+    public ResponseEntity<?> PesquiserCurso(@PathVariable(value = "courseId") UUID courseId) {
 
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
-        if(!courseModelOptional.isPresent()){
+        if (!courseModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado");
 
         }

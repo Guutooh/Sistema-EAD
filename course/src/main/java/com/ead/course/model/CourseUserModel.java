@@ -19,10 +19,10 @@ public class CourseUserModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    @Column(nullable = false)
+    private UUID userId;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private  CourseModel course;
-
-    @Column(nullable = false)
-    private UUID courseId;
 
 }

@@ -25,7 +25,7 @@ public class CourseModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID courseID;
+    private UUID courseId;
 
     @Column(nullable = false,  length = 150)
     private String name;
@@ -61,10 +61,9 @@ public class CourseModel implements Serializable {
     //@OnDelete(action = OnDeleteAction.CASCADE)O BD que fica responsavel pelas deleções, Mas não temos controle do que realmente está sendo deletado
     private Set<ModuloModel> modulos;
 
-
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
-    private Set<CourseUserModel> courseUsers;
+    private Set<CourseUserModel> coursesUsers;
 
 
 }
