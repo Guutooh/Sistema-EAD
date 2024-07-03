@@ -31,6 +31,7 @@ public class UserController {
 
     @GetMapping("/{userId}")
     public ResponseEntity<?> getOneUser(@PathVariable UUID userId) {
+
         Optional<UserModel> userModelOptional = userService.findById(userId);
 
         if (!userModelOptional.isPresent()) {
