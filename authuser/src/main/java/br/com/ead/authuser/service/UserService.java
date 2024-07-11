@@ -1,8 +1,10 @@
 package br.com.ead.authuser.service;
 
 import br.com.ead.authuser.models.UserModel;
+import br.com.ead.authuser.spec.SpecificationTemplate;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +12,7 @@ import java.util.UUID;
 
 public interface UserService {
 
-    List<UserModel> findAll();
+    List<UserModel> findAll(Pageable pageable);
 
     Optional<UserModel> findById(UUID userId);
 
@@ -22,5 +24,5 @@ public interface UserService {
 
     boolean existsByEmail(String email);
 
-    Page<UserModel> findAll(Pageable pageable);
+    Page<UserModel> findAll(Specification<UserModel> spec, Pageable pageable );
 }
