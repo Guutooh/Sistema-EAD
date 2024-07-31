@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e477b0c-cf7f-4fad-88de-c1c1a44adc0a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/configs/ResolverConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/configs/ResolverConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/LessonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/LessonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/ModuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/CourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/CourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/LessonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/LessonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/ModuleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/dtos/ModuleDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/enums/CourseLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/enums/CourseLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/enums/CourseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/enums/CourseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/LessonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/LessonModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/ModuleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/ModuleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/repositories/LessonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/repositories/ModuloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/repositories/ModuloRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/ModuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/ModuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/ModuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/services/impl/ModuleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2eoS6WIAXHlDfggO4MhZIUJ005f" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthuserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CourseApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Legion/OneDrive/_Unidade_D/Decoder/Sistema-Ead/course/src/main/java/br/com/ead/course&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.ead.authuser.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\dtos" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\controllers" />
+      <recent name="C:\Users\Legion\OneDrive\#Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\services\impl" />
+      <recent name="C:\Users\Legion\OneDrive\#Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\services" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CourseApplication">
+    <configuration name="AuthuserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="authuser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ead.authuser.AuthuserApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ead.authuser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="course" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ead.course.CourseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AuthuserApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e477b0c-cf7f-4fad-88de-c1c1a44adc0a" name="Changes" comment="" />
+      <created>1712569262784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712569262784</updated>
+      <workItem from="1712569264216" duration="630000" />
+      <workItem from="1712766584516" duration="6467000" />
+      <workItem from="1712953313091" duration="6748000" />
+      <workItem from="1713182796562" duration="4630000" />
+      <workItem from="1713559742523" duration="1812000" />
+      <workItem from="1720024721204" duration="300000" />
+      <workItem from="1720032801130" duration="153000" />
+      <workItem from="1720033055304" duration="8189000" />
+      <workItem from="1720094522475" duration="5303000" />
+      <workItem from="1720221445511" duration="3068000" />
+      <workItem from="1720620385762" duration="4734000" />
+      <workItem from="1720639103201" duration="7600000" />
+      <workItem from="1720837487671" duration="749000" />
+      <workItem from="1721000541332" duration="3284000" />
+      <workItem from="1721230743736" duration="471000" />
+      <workItem from="1721608472506" duration="11000" />
+      <workItem from="1721671696317" duration="4023000" />
+      <workItem from="1721776801419" duration="6202000" />
+      <workItem from="1722289438597" duration="5749000" />
+      <workItem from="1722336133277" duration="8006000" />
+      <workItem from="1722424986910" duration="4150000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
