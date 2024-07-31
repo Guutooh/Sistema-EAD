@@ -3,7 +3,7 @@ package br.com.ead.authuser.controller;
 import br.com.ead.authuser.dtos.UserDto;
 import br.com.ead.authuser.models.UserModel;
 import br.com.ead.authuser.service.UserService;
-import br.com.ead.authuser.spec.SpecificationTemplate;
+import br.com.ead.authuser.specification.SpecificationTemplate;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

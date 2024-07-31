@@ -3,7 +3,6 @@ package br.com.ead.authuser.service.impl;
 import br.com.ead.authuser.models.UserModel;
 import br.com.ead.authuser.repositories.UserRepository;
 import br.com.ead.authuser.service.UserService;
-import br.com.ead.authuser.spec.SpecificationTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package br.com.ead.authuser.spec;
+package br.com.ead.authuser.specification;
 
 import br.com.ead.authuser.models.UserModel;
 
