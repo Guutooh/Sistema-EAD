@@ -4,8 +4,11 @@ import br.com.ead.course.models.LessonModel;
 import br.com.ead.course.models.ModuleModel;
 import br.com.ead.course.repositories.LessonRepository;
 import br.com.ead.course.repositories.ModuloRepository;
-import br.com.ead.course.services.ModuloService;
+import br.com.ead.course.services.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -14,7 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class ModuloServiceImpl implements ModuloService {
+public class ModuleServiceImpl implements ModuleService {
 
     @Autowired
     ModuloRepository moduleRepository;
@@ -55,5 +58,10 @@ public class ModuloServiceImpl implements ModuloService {
     @Override
     public Optional<ModuleModel> findById(UUID modulosId) {
         return moduleRepository.findById(modulosId);
+    }
+
+    @Override
+    public Page<ModuleModel> findAllByCourse(Specification<ModuleModel> spec, Pageable page) {
+        return moduleRepository.findAll(spec, page);
     }
 }

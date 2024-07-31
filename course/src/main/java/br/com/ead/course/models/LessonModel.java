@@ -38,6 +38,6 @@ public class LessonModel implements Serializable {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(optional = false, fetch = FetchType.LAZY) //Definir como banco de dados é carregado no BD
-    private ModuloModel module; //chave estrangeira
+    private ModuleModel module; //chave estrangeira
 
 }

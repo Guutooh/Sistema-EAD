@@ -2,7 +2,7 @@ package br.com.ead.course.services.impl;
 
 import br.com.ead.course.models.CourseModel;
 import br.com.ead.course.models.LessonModel;
-import br.com.ead.course.models.ModuloModel;
+import br.com.ead.course.models.ModuleModel;
 import br.com.ead.course.repositories.CourseRepository;
 import br.com.ead.course.repositories.LessonRepository;
 import br.com.ead.course.repositories.ModuloRepository;
@@ -31,15 +31,15 @@ public class CourseServiceImpl implements CourseService {
     LessonRepository lessonRepository;
     @Transactional
     @Override
-    public void deletar(CourseModel courseModel) {
+    public void delete(CourseModel courseModel) {
 
-        List<ModuloModel> moduleModelList = moduloRepository.findAllModulosIntoCourse(courseModel.getCourseId());
+        List<ModuleModel> moduleModelList = moduloRepository.findAllModulosIntoCourse(courseModel.getCourseId());
 
         if(!moduleModelList.isEmpty()){
 
-            for(ModuloModel module: moduleModelList){
+            for(ModuleModel module: moduleModelList){
 
-                List<LessonModel> lessonModelList = lessonRepository.findAllLessonsIntoModule(module.getModuloId());
+                List<LessonModel> lessonModelList = lessonRepository.findAllLessonsIntoModule(module.getModuleId());
 
                 if(!lessonModelList.isEmpty()){
 

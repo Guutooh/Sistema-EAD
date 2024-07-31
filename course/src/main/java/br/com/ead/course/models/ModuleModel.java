@@ -18,15 +18,15 @@ import java.util.UUID;
 // JsonInclude - Ao resgatar os dados do usuario por meio do GEt ele não ira apresentar os valores nulos
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
-@Table(name = "TB_MODULOS")
+@Table(name = "tb_modules")
 
-public class ModuloModel implements Serializable {
+public class ModuleModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID moduloId;
+    private UUID moduleId;
 
     @Column(nullable = false, length = 150)
     private String title;

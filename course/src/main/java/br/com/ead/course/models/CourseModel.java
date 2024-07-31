@@ -53,11 +53,11 @@ public class CourseModel implements Serializable {
     private CourseLevel courseLevel;
 
     @Column(nullable = false)
-    private UUID userInstrutor;
+    private UUID userInstructor;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Definir o tipo de acesso para esse atributo.
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     @Fetch(FetchMode.SUBSELECT)
-    private Set<ModuloModel> modules;
+    private Set<ModuleModel> modules;
 
 }
