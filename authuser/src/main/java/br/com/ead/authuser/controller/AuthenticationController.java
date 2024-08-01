@@ -8,7 +8,6 @@ import br.com.ead.authuser.service.UserService;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -23,8 +22,12 @@ import java.time.ZoneId;
 @RequestMapping("/auth")
 public class AuthenticationController {
 
-    @Autowired
-    UserService userService;
+
+    private final UserService userService;
+
+    public AuthenticationController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody
@@ -32,14 +35,14 @@ public class AuthenticationController {
                                           @JsonView(UserDto.UserView.RegistrationPost.class)
                                           UserDto userDto) {
 
-        log.debug("POST registerUser userDto received {} ", userDto.toString());
+        log.debug("POST registerUser userDto received: {} ", userDto.toString());
         if (userService.existsByUsername(userDto.getUserName())) {
 
-            log.warn("Username {} já existe ", userDto.getUserName());
+            log.warn("Username: {} já existe ", userDto.getUserName());
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Usuario já existe");
         }
         if (userService.existsByEmail(userDto.getEmail())) {
-            log.warn("Email {} já existe ", userDto.getEmail());
+            log.warn("Email: {} já existe ", userDto.getEmail());
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Email já existe");
         }
 
@@ -54,8 +57,8 @@ public class AuthenticationController {
 
         userService.save(userModel);
 
-        log.debug("POST registerUser userId Salvo {} ", userModel.getUserId());
-        log.info("Usuario salvo com sucesso userId {} ", userModel.getUserId());
+        log.debug("POST registerUser userId Salvo: {} ", userModel.getUserId());
+        log.info("Usuario salvo com sucesso userId: {} ", userModel.getUserId());
         return ResponseEntity.status(HttpStatus.CREATED).body(userModel);
     }
 

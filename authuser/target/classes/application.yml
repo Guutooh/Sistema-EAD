@@ -19,6 +19,9 @@ spring:
     properties:
       hibernate:
         show_sql: true
+  output:
+    ansi:
+      enabled: always
 
 #springdoc:
 #  api-docs:
@@ -31,5 +34,6 @@ logging:
   level:
     br.com.ead: trace  # Define o nível de logging para o pacote 'br.com.ead' como TRACE, que é o nível mais detalhado.
     root: info  # Define o nível de logging padrão (root) como INFO, que é um nível de logging intermediário.
-    org.springframework.web: debug  # Define o nível de logging para o pacote 'org.springframework.web' como DEBUG, útil para depurar problemas relacionados ao Spring Web.
-    org.hibernate: debug
+    org.springframework.web: debug  # DEBUG, útil para depurar problemas relacionados ao Spring Web.
+    org.hibernate: info  #  INFO, que é um nível intermediário, útil para visualizar informações gerais sem excesso de detalhes.
+
