@@ -62,7 +62,7 @@ public class CourseModel implements Serializable {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Definir o tipo de acesso para esse atributo.
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
-    private Set<CourseUserModel> users;
+    private Set<CourseUserModel> courseUsers;
 
 
 }

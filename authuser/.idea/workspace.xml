@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e477b0c-cf7f-4fad-88de-c1c1a44adc0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/models/UserCourseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/repositories/UserCourseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/service/UserCourseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/service/impl/UserCourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e738af7-ce63-4bdb-8a46-9f54e3c86ed6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e738af7-ce63-4bdb-8a46-9f54e3c86ed6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e738af7-ce63-4bdb-8a46-9f54e3c86ed6/storage_v2/_src_/database/ead-authuser.WGLjRQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e738af7-ce63-4bdb-8a46-9f54e3c86ed6/storage_v2/_src_/database/ead-authuser.WGLjRQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6d812d9-13c7-46c0-9901-b0f2ac54a677.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6d812d9-13c7-46c0-9901-b0f2ac54a677.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6d812d9-13c7-46c0-9901-b0f2ac54a677/storage_v2/_src_/database/ead-course.QIKYHg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6d812d9-13c7-46c0-9901-b0f2ac54a677/storage_v2/_src_/database/ead-course.QIKYHg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/specification/SpecificationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/specification/SpecificationTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/models/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/models/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseUserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseUserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +167,7 @@
       <workItem from="1722289438597" duration="5749000" />
       <workItem from="1722336133277" duration="8006000" />
       <workItem from="1722424986910" duration="17295000" />
-      <workItem from="1722530901632" duration="3172000" />
+      <workItem from="1722530901632" duration="6444000" />
     </task>
     <servers />
   </component>

@@ -64,7 +64,7 @@ public class CourseController {
 
     @PutMapping("/{courseId}")
     public ResponseEntity<?> updateCourse(@PathVariable UUID courseId,
-                                            @RequestBody @Valid CourseDto courseDto) {
+                                          @RequestBody @Valid CourseDto courseDto) {
 
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
@@ -84,7 +84,15 @@ public class CourseController {
     @GetMapping("")
     public ResponseEntity<Page<CourseModel>> getAllCourses(SpecificationTemplate.CourseSpec spec,
                                                            @PageableDefault(page = 0, size = 10, sort = "courseId",
-                                                                       direction = Sort.Direction.ASC) Pageable page) {
+                                                                   direction = Sort.Direction.ASC) Pageable page,
+                                                           @RequestParam(required = false) UUID userId) {
+
+
+
+
+        if (userId != null) {
+            return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(SpecificationTemplate.courseUserId(userId).and(spec), page));
+        }
 
         return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(spec, page));
     }
