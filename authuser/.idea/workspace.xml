@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e477b0c-cf7f-4fad-88de-c1c1a44adc0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/clients/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/configs/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/UserCourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/dtos/CourseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/dtos/ResponsePageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/enums/CourseLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/enums/CourseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/service/UtilsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/service/impl/UtilsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/specification/SpecificationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ead/authuser/specification/SpecificationTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/models/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ead/authuser/models/UserModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/controllers/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/models/CourseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../course/src/main/java/br/com/ead/course/specifications/SpecificationTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,46 +57,52 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AuthuserApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CourseApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Legion/OneDrive/_Unidade_D/Decoder/Sistema-Ead/course/src/main/java/br/com/ead/course/configs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.authuser [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AuthuserApplication.executor": "Run",
+    "Spring Boot.CourseApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Legion/OneDrive/_Unidade_D/Decoder/Sistema-Ead/authuser/src/main/java/br/com/ead/authuser/service/impl",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.ead.authuser.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\configs" />
-      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course" />
-      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\dtos" />
-      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\controllers" />
-      <recent name="C:\Users\Legion\OneDrive\#Unidade_D\Decoder\Sistema-Ead\course\src\main\java\br\com\ead\course\services\impl" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\authuser\src\main\java\br\com\ead\authuser\service\impl" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\authuser\src\main\java\br\com\ead\authuser\service" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\authuser\src\main\java\br\com\ead\authuser\dtos" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\authuser\src\main\java\br\com\ead\authuser\configs" />
+      <recent name="C:\Users\Legion\OneDrive\_Unidade_D\Decoder\Sistema-Ead\authuser\src\main\java\br\com\ead\authuser" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -103,8 +111,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CourseApplication">
+  <component name="RunManager" selected="Spring Boot.AuthuserApplication">
     <configuration name="AuthuserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <module name="authuser" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ead.authuser.AuthuserApplication" />
       <extension name="coverage">
@@ -124,6 +133,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CourseApplication" />
+      <item itemvalue="Spring Boot.AuthuserApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AuthuserApplication" />
@@ -167,7 +180,8 @@
       <workItem from="1722289438597" duration="5749000" />
       <workItem from="1722336133277" duration="8006000" />
       <workItem from="1722424986910" duration="17295000" />
-      <workItem from="1722530901632" duration="6444000" />
+      <workItem from="1722530901632" duration="7118000" />
+      <workItem from="1723103916823" duration="4950000" />
     </task>
     <servers />
   </component>
